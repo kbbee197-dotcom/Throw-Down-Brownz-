@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews | Throw Down Brownz</title>
+<meta name="description" content="Read what customers say about Throw Down Brownz food truck in Fort Myers, FL, and leave your own review.">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📍 Fort Myers, FL &nbsp;|&nbsp; 📞 <a href="tel:3051234567">(305) 123-4567</a></span>
+    <span><a href="order.html">Delivery available on orders $100+ →</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Throw Down Brownz logo">
+      <div class="brand-text">
+        <div class="t1">THROW DOWN</div>
+        <div class="t2">BROWNZ</div>
+        <div class="tagline">Urban Food Truck</div>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order Online</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="index.html#location">Find The Truck</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:40px;">
+  <div class="container">
+    <div class="section-head" style="margin-bottom:0;">
+      <div class="kicker">4.9 out of 5 — 120+ reviews</div>
+      <h2 style="color:var(--brown-deep);">What Fort Myers is saying</h2>
+      <p>Real feedback from people who've tracked down the truck.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px;">
+  <div class="container">
+    <div class="grid cols-3">
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"The Honey Parmesan wings are worth tracking the truck down for. Crispy, garlicky, not overly sweet — best wings I've had in Fort Myers."</p>
+        <div class="review-name">Marcus D.</div>
+        <div class="review-meta">Google Review · 2 weeks ago</div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Ordered the 10-piece combo with curly fries for a family gathering. Everyone went back for seconds. Will absolutely be ordering again."</p>
+        <div class="review-name">Alicia R.</div>
+        <div class="review-meta">Facebook Review · 1 month ago</div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"We placed a big order for the office and they delivered right on time, still hot. The Sweet &amp; Hot Asian flavor is dangerously good."</p>
+        <div class="review-name">Jonathan P.</div>
+        <div class="review-meta">Website Review · 3 weeks ago</div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Root Beer BBQ is a flavor I didn't know I needed. Sweet, smoky, and the wings were huge. Kids meal with mac and cheese was a hit too."</p>
+        <div class="review-name">Denise W.</div>
+        <div class="review-meta">Google Review · 1 month ago</div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★☆</div>
+        <p>"Great wings, great truck. Only reason it's not five stars is the line gets long on weekends — but that tells you the food is worth the wait."</p>
+        <div class="review-name">Trevor S.</div>
+        <div class="review-meta">Yelp Review · 2 months ago</div>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Found them parked downtown and haven't stopped thinking about the curry wings since. Wedges are perfectly crisp too."</p>
+        <div class="review-name">Priya N.</div>
+        <div class="review-meta">Website Review · 5 days ago</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg" id="leave-review">
+  <div class="container" style="max-width:720px;">
+    <div class="section-head">
+      <div class="kicker">Tell Us About Your Visit</div>
+      <h2>Leave a review</h2>
+      <p>Had wings from the truck? Let other customers — and us — know how it went.</p>
+    </div>
+
+    <form action="https://formsubmit.co/reviews@throwdownbrownz.com" method="POST" class="form-card">
+      <input type="hidden" name="_subject" value="New Customer Review — Throw Down Brownz">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+
+      <div class="field-row">
+        <div>
+          <label for="rev-name">Your Name</label>
+          <input type="text" id="rev-name" name="Name" required>
+        </div>
+        <div>
+          <label for="rev-rating">Rating</label>
+          <select id="rev-rating" name="Rating" required>
+            <option value="">Select a rating</option>
+            <option value="5 stars">★★★★★ — Excellent</option>
+            <option value="4 stars">★★★★☆ — Great</option>
+            <option value="3 stars">★★★☆☆ — Good</option>
+            <option value="2 stars">★★☆☆☆ — Fair</option>
+            <option value="1 star">★☆☆☆☆ — Poor</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="rev-email">Email (not shown publicly)</label>
+      <input type="email" id="rev-email" name="Email" required>
+
+      <label for="rev-text">Your Review</label>
+      <textarea id="rev-text" name="Review" rows="4" placeholder="What did you order? How was it?" required></textarea>
+
+      <button type="submit" class="btn btn-primary btn-block">Submit Review</button>
+      <p class="helper center" style="margin-top:14px;">Reviews are read by our team and may be featured on this page.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container grid">
+    <div>
+      <h4>Throw Down Brownz</h4>
+      <p style="font-size:0.9rem; max-width:280px;">Urban food truck serving hand-tossed wings, tenders, and sides in Fort Myers, FL.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="menu.html">Full Menu</a></li>
+        <li><a href="order.html">Order Online</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:3051234567">(305) 123-4567</a></li>
+        <li>Fort Myers, FL</li>
+        <li><a href="index.html#location">Live Location</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <ul>
+        <li>Hours vary by location</li>
+        <li>See live banner for today's stop</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year></span> Throw Down Brownz. All rights reserved.</span>
+    <span>Fort Myers, FL</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

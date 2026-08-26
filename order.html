@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Online | Throw Down Brownz</title>
+<meta name="description" content="Order online from Throw Down Brownz. Pickup available at our current location, delivery available on orders of $100 or more.">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📍 Fort Myers, FL &nbsp;|&nbsp; 📞 <a href="tel:3051234567">(305) 123-4567</a></span>
+    <span><a href="menu.html">View full menu →</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="container nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="logo.png" alt="Throw Down Brownz logo">
+      <div class="brand-text">
+        <div class="t1">THROW DOWN</div>
+        <div class="t2">BROWNZ</div>
+        <div class="tagline">Urban Food Truck</div>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html" class="active">Order Online</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="index.html#location">Find The Truck</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="locate-bar">
+  <div class="container">
+    <div class="locate-left">
+      <span class="locate-badge"><span class="dot"></span><span data-location-status>LIVE NOW</span></span>
+      <div><div id="current-location-text" data-location-address>Loading location…</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">Order Ahead</div>
+      <h2>Build your order</h2>
+      <p>Set quantities below, choose pickup or delivery, and tell us your flavor and side picks in the notes field. We'll confirm everything by phone or email before it's final.</p>
+    </div>
+
+    <div class="note-box">
+      <strong>Pickup</strong> is available for any order size at our current parked location (see banner above).<br>
+      <strong>Delivery</strong> requires a minimum order of <strong>$100.00</strong> and is available within our Fort Myers service area.
+    </div>
+
+    <form id="order-form" action="https://formsubmit.co/orders@throwdownbrownz.com" method="POST" class="form-card">
+      <input type="hidden" name="_subject" value="New Order — Throw Down Brownz">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none">
+      <input type="hidden" id="order-summary-hidden" name="Order Summary">
+
+      <fieldset>
+        <legend>Wing &amp; Tender Combos</legend>
+        <div class="field-row">
+          <div>
+            <label for="qty-combo5">5-Piece Combo — $10.00 <span style="font-weight:400;">(wings/tenders + side)</span></label>
+            <input type="number" id="qty-combo5" min="0" max="30" value="0" data-price="10.00" data-name="5-Piece Combo">
+          </div>
+          <div>
+            <label for="qty-combo10">10-Piece Combo — $15.00 <span style="font-weight:400;">(wings/tenders + side)</span></label>
+            <input type="number" id="qty-combo10" min="0" max="30" value="0" data-price="15.00" data-name="10-Piece Combo">
+          </div>
+        </div>
+        <label for="qty-special">$5 Daily Special — $5.00 <span style="font-weight:400;">(5 wings, any flavor, no side)</span></label>
+        <input type="number" id="qty-special" min="0" max="30" value="0" data-price="5.00" data-name="$5 Special">
+      </fieldset>
+
+      <fieldset>
+        <legend>Sides À La Carte</legend>
+        <div class="field-row">
+          <div>
+            <label for="qty-fries">Fries — $4.50</label>
+            <input type="number" id="qty-fries" min="0" max="30" value="0" data-price="4.50" data-name="Fries">
+          </div>
+          <div>
+            <label for="qty-tots">Tater Tots — $5.00</label>
+            <input type="number" id="qty-tots" min="0" max="30" value="0" data-price="5.00" data-name="Tater Tots">
+          </div>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="qty-curly">Curly Fries — $5.50</label>
+            <input type="number" id="qty-curly" min="0" max="30" value="0" data-price="5.50" data-name="Curly Fries">
+          </div>
+          <div>
+            <label for="qty-wedges">Wedges — $5.50</label>
+            <input type="number" id="qty-wedges" min="0" max="30" value="0" data-price="5.50" data-name="Wedges">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Kids Menu (includes fries)</legend>
+        <div class="field-row">
+          <div>
+            <label for="qty-nuggets">5 Chicken Nuggets + Fries — $7.00</label>
+            <input type="number" id="qty-nuggets" min="0" max="30" value="0" data-price="7.00" data-name="Kids Nuggets Meal">
+          </div>
+          <div>
+            <label for="qty-mac">Mac &amp; Cheese Bowl + Fries — $7.00</label>
+            <input type="number" id="qty-mac" min="0" max="30" value="0" data-price="7.00" data-name="Kids Mac & Cheese Meal">
+          </div>
+        </div>
+        <label for="qty-kidstenders">3 Tenders + Fries — $7.50</label>
+        <input type="number" id="qty-kidstenders" min="0" max="30" value="0" data-price="7.50" data-name="Kids Tenders Meal">
+      </fieldset>
+
+      <fieldset>
+        <legend>Drinks — $2.00 each</legend>
+        <p class="helper mt-0">Sprite, Cola, Pepsi, Root Beer, Mountain Dew, Hi-C, Fanta (Pineapple/Strawberry/Grape), Iced Tea, Fruit Punch, Bottled Water.</p>
+        <label for="qty-drinks">Number of Drinks — $2.00 each</label>
+        <input type="number" id="qty-drinks" min="0" max="60" value="0" data-price="2.00" data-name="Drinks">
+      </fieldset>
+
+      <div class="order-total">
+        <div style="font-size:0.85rem; letter-spacing:1px; text-transform:uppercase;">Estimated Total</div>
+        <div class="amt" id="order-total-amount">$0.00</div>
+        <div style="font-size:0.8rem;">Final total confirmed by phone or email before your order is placed.</div>
+      </div>
+
+      <fieldset>
+        <legend>Flavor &amp; Side Choices</legend>
+        <label for="flavor-notes">Tell us the flavor and side for each combo/item above</label>
+        <textarea id="flavor-notes" name="Flavor & Side Notes" rows="3" placeholder="Example: 10-Piece Combo — Honey Parmesan flavor, curly fries side"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pickup or Delivery</legend>
+        <div class="field-row" style="margin-bottom:6px;">
+          <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+            <input type="radio" name="fulfillment" value="pickup" checked style="width:auto; margin:0;"> Pickup at current location
+          </label>
+          <label style="display:flex; align-items:center; gap:8px; font-weight:600;">
+            <input type="radio" name="fulfillment" value="delivery" style="width:auto; margin:0;"> Delivery ($100 minimum)
+          </label>
+        </div>
+        <p id="delivery-warning" class="helper" style="display:none; color:var(--orange-deep); font-weight:700;">Your order must total at least $100.00 to qualify for delivery. Add more items or switch to pickup.</p>
+
+        <div id="delivery-fields" style="display:none; margin-top:14px;">
+          <label for="delivery-address">Delivery Address</label>
+          <input type="text" id="delivery-address" name="Delivery Address" placeholder="Street address, city, ZIP">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Contact Info</legend>
+        <div class="field-row">
+          <div>
+            <label for="cust-name">Full Name</label>
+            <input type="text" id="cust-name" name="Name" required>
+          </div>
+          <div>
+            <label for="cust-phone">Phone Number</label>
+            <input type="tel" id="cust-phone" name="Phone" required>
+          </div>
+        </div>
+        <label for="cust-email">Email</label>
+        <input type="email" id="cust-email" name="Email" required>
+        <label for="cust-time">Preferred Pickup/Delivery Time</label>
+        <input type="text" id="cust-time" name="Preferred Time" placeholder="e.g. Today at 5:30 PM">
+      </fieldset>
+
+      <button type="submit" id="order-submit-btn" class="btn btn-primary btn-block">Submit Order</button>
+      <p class="helper center" style="margin-top:14px;">By submitting, you'll receive a confirmation call or email to finalize payment and timing.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container grid">
+    <div>
+      <h4>Throw Down Brownz</h4>
+      <p style="font-size:0.9rem; max-width:280px;">Urban food truck serving hand-tossed wings, tenders, and sides in Fort Myers, FL.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="menu.html">Full Menu</a></li>
+        <li><a href="order.html">Order Online</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:3051234567">(305) 123-4567</a></li>
+        <li>Fort Myers, FL</li>
+        <li><a href="index.html#location">Live Location</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <ul>
+        <li>Hours vary by location</li>
+        <li>See live banner for today's stop</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span data-year></span> Throw Down Brownz. All rights reserved.</span>
+    <span>Fort Myers, FL</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
